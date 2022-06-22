@@ -1,0 +1,37 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L53",
+	"function": "sap-api-integrations-product-reads-c4/SAP_API_Caller.(*SAPAPICaller).ProductCollection",
+	"level": "INFO",
+	"message": [
+		{
+			"ObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"UUID": "00163E03-A070-1EE2-88BE-9895233EBD27",
+			"Language": "EN",
+			"LanguageText": "English",
+			"Description": "GS Marengo Womens Mountain Bike",
+			"ProductCategoryID": "CUSTOMER-01",
+			"Status": "3",
+			"StatusText": "Blocked",
+			"Usage": "",
+			"UsageText": "",
+			"Division": "",
+			"DivisionText": "",
+			"BaseUOM": "EA",
+			"BaseUOMText": "Each",
+			"CreatedBy": "SAP WORKER",
+			"LastChangedBy": "Eddie Smoke",
+			"CreatedOn": "2012-10-30T03:16:40+09:00",
+			"LastChangedOn": "2015-02-04T06:07:03+09:00",
+			"CreatedByUUID": "00163E03-A070-1EE2-88B6-F539A6B028F3",
+			"LastChangedByUUID": "00163E03-A070-1EE2-88BA-39BD20F290B5",
+			"ExternalSystem": "CRM",
+			"ExternalID": "P140100",
+			"EntityLastChangedOn": "2015-02-04T06:07:03+09:00",
+			"ETag": "2016-07-13T20:41:32+09:00",
+			"ProductOtherDescriptions": "https://sandbox.api.sap.com/sap/c4c/odata/v1/c4codataapi/ProductCollection('00163E03A0701EE288BE9895233EBD27')/ProductOtherDescriptions",
+			"ProductSalesProcessInformation": "https://sandbox.api.sap.com/sap/c4c/odata/v1/c4codataapi/ProductCollection('00163E03A0701EE288BE9895233EBD27')/ProductSalesProcessInformation"
+		}
+	],
+	"time": "2022-06-22T09:16:05+09:00"
+}

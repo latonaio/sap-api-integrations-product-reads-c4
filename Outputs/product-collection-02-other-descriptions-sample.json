@@ -1,0 +1,80 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L60",
+	"function": "sap-api-integrations-product-reads-c4/SAP_API_Caller.(*SAPAPICaller).ProductCollection",
+	"level": "INFO",
+	"message": [
+		{
+			"ObjectID": "00163E03A0701EE288BE98952359FD27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "EN",
+			"LanguageText": "English",
+			"Description": "GS Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235A1D27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "ZH",
+			"LanguageText": "Chinese",
+			"Description": "GT Marengo 系列女式山地车",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235A3D27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "NL",
+			"LanguageText": "Dutch",
+			"Description": "GT Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235A5D27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "FR",
+			"LanguageText": "French",
+			"Description": "GT Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235A7D27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "DE",
+			"LanguageText": "German",
+			"Description": "GT Marengo Damen Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235A9D27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "IT",
+			"LanguageText": "Italian",
+			"Description": "GT Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235ABD27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "PT",
+			"LanguageText": "Portuguese",
+			"Description": "GT Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		},
+		{
+			"ObjectID": "00163E03A0701EE288BE9895235ADD27",
+			"ParentObjectID": "00163E03A0701EE288BE9895233EBD27",
+			"ProductID": "P140100",
+			"Language": "ES",
+			"LanguageText": "Spanish",
+			"Description": "GT Marengo Womens Mountain Bike",
+			"ETag": "2015-02-04T06:07:03+09:00"
+		}
+	],
+	"time": "2022-06-22T09:16:06+09:00"
+}
