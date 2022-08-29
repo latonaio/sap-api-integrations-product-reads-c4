@@ -1,5 +1,5 @@
 {
-	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L53",
+	"cursor": "/Users/latona5/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L53",
 	"function": "sap-api-integrations-product-reads-c4/SAP_API_Caller.(*SAPAPICaller).ProductCollection",
 	"level": "INFO",
 	"message": [
@@ -33,5 +33,5 @@
 			"ProductSalesProcessInformation": "https://sandbox.api.sap.com/sap/c4c/odata/v1/c4codataapi/ProductCollection('00163E03A0701EE288BE9895233EBD27')/ProductSalesProcessInformation"
 		}
 	],
-	"time": "2022-06-22T09:16:05+09:00"
+	"time": "2022-08-29T20:57:02+09:00"
 }

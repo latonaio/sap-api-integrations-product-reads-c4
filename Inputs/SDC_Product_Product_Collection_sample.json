@@ -4,7 +4,7 @@
 	"redis_key": "abcdefg",
 	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
 	"ProductCollection": {
-		"ObjectID": "",           
+		"ObjectID": "00163E03A0701EE288BE9895233EBD27",           
 		"ProductID": "P140100",               
 		"UUID": "",                    
 		"Language": "",                
@@ -32,7 +32,7 @@
 		"ProductOtherDescriptions": {
 			"ObjectID": "",    
 			"ParentObjectID": "", 
-			"ProductID": "P140100",      
+			"ProductID": "",      
 			"Language": "",       
 			"LanguageText": "",   
 			"Description": "",    
@@ -40,7 +40,7 @@
 		    "ProductSalesProcessInformation": {
 				"ObjectID": "",
 				"ParentObjectID": "",
-				"ProductID": "P140100",
+				"ProductID": "",
 				"SalesOrganisationID": "",
 				"DistributionChannel": "",    
 				"DistributionChannelText": "",
@@ -54,7 +54,7 @@
 			}  
 			}
 	},
-	"api_schema": "ProductProductCollection",
+	"api_schema": "Product",
 	"accepter": ["ProductCollection"],
 	"product_code": "P140100",
 	"deleted": false

@@ -33,10 +33,8 @@ sap-api-integrations-product-reads-c4  において、API への値入力条件�
 
 ### SDC レイアウト
 
+* inoutSDC.ProductCollection.ObjectID（対象ID）
 * inoutSDC.ProductCollection.ProductID（製品ID）
-* inoutSDC.ProductCollection.ProductOtherDescriptions.ProductID（製品ID）
-* inoutSDC.ProductCollection.ProductSalesProcessInformation.ProductID（製品ID）
-
 
 ## SAP API Bussiness Hub の API の選択的コール
 
@@ -49,7 +47,7 @@ accepter において 下記の例のように、データの種別（＝APIの�
 ここでは、"ProductCollection" が指定されています。    
   
 ```
-	"api_schema": "ProductProductCollection",
+	"api_schema": "Product",
 	"accepter": ["ProductCollection"],
 	"product_code": "P140100",
 	"deleted": false
@@ -60,7 +58,7 @@ accepter において 下記の例のように、データの種別（＝APIの�
 全データを取得する場合、sample.json は以下のように記載します。  
 
 ```
-	"api_schema": "ProductProductCollection",
+	"api_schema": "Product",
 	"accepter": ["All"],
 	"product_code": "P140100",
 	"deleted": false
@@ -72,14 +70,14 @@ accepter における データ種別 の指定に基づいて SAP_API_Caller �
 caller.go の func() 毎 の 以下の箇所が、指定された API をコールするソースコードです。  
 
 ```
-func (c *SAPAPICaller) AsyncGetProduct(productID string, accepter []string) {
+func (c *SAPAPICaller) AsyncGetProduct(objectID, productID string, accepter []string) {
 	wg := &sync.WaitGroup{}
 	wg.Add(len(accepter))
 	for _, fn := range accepter {
 		switch fn {
 		case "ProductCollection":
 			func() {
-				c.ProductCollection(productID)
+				c.ProductCollection(objectID, productID)
 				wg.Done()
 			}()
 		default:
@@ -93,7 +91,7 @@ func (c *SAPAPICaller) AsyncGetProduct(productID string, accepter []string) {
 
 ## Output  
 本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
-以下の sample.json の例は、SAP キャンペーン  の キャンペーンデータ が取得された結果の JSON の例です。  
+以下の sample.json の例は、SAP 製品  の 製品データ が取得された結果の JSON の例です。  
 以下の項目のうち、"ObjectID" ～ "ETag" は、/SAP_API_Output_Formatter/type.go 内 の Type ProductCollection {} による出力結果です。"cursor" ～ "time"は、golang-logging-library-for-sap による 定型フォーマットの出力結果です。  
 
 ```

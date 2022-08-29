@@ -1,5 +1,5 @@
 {
-	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L60",
+	"cursor": "/Users/latona5/bitbucket/sap-api-integrations-product-reads-c4/SAP_API_Caller/caller.go#L60",
 	"function": "sap-api-integrations-product-reads-c4/SAP_API_Caller.(*SAPAPICaller).ProductCollection",
 	"level": "INFO",
 	"message": [
@@ -76,5 +76,5 @@
 			"ETag": "2015-02-04T06:07:03+09:00"
 		}
 	],
-	"time": "2022-06-22T09:16:06+09:00"
+	"time": "2022-08-29T20:57:03+09:00"
 }

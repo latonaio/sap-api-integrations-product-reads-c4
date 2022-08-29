@@ -26,14 +26,14 @@ func NewSAPAPICaller(baseUrl string, l *logger.Logger) *SAPAPICaller {
 	}
 }
 
-func (c *SAPAPICaller) AsyncGetProduct(productID string, accepter []string) {
+func (c *SAPAPICaller) AsyncGetProduct(objectID, productID string, accepter []string) {
 	wg := &sync.WaitGroup{}
 	wg.Add(len(accepter))
 	for _, fn := range accepter {
 		switch fn {
 		case "ProductCollection":
 			func() {
-				c.ProductCollection(productID)
+				c.ProductCollection(objectID, productID)
 				wg.Done()
 			}()
 		default:
@@ -44,8 +44,8 @@ func (c *SAPAPICaller) AsyncGetProduct(productID string, accepter []string) {
 	wg.Wait()
 }
 
-func (c *SAPAPICaller) ProductCollection(productID string) {
-	productCollectionData, err := c.callProductSrvAPIRequirementProductCollection("ProductCollection", productID)
+func (c *SAPAPICaller) ProductCollection(objectID, productID string) {
+	productCollectionData, err := c.callProductSrvAPIRequirementProductCollection("ProductCollection", objectID, productID)
 	if err != nil {
 		c.log.Error(err)
 		return
@@ -68,12 +68,12 @@ func (c *SAPAPICaller) ProductCollection(productID string) {
 
 }
 
-func (c *SAPAPICaller) callProductSrvAPIRequirementProductCollection(api, productID string) ([]sap_api_output_formatter.ProductCollection, error) {
+func (c *SAPAPICaller) callProductSrvAPIRequirementProductCollection(api, objectID, productID string) ([]sap_api_output_formatter.ProductCollection, error) {
 	url := strings.Join([]string{c.baseURL, "c4codataapi", api}, "/")
 	req, _ := http.NewRequest("GET", url, nil)
 
 	c.setHeaderAPIKeyAccept(req)
-	c.getQueryWithProductCollection(req, productID)
+	c.getQueryWithProductCollection(req, objectID, productID)
 
 	resp, err := new(http.Client).Do(req)
 	if err != nil {
@@ -130,8 +130,8 @@ func (c *SAPAPICaller) setHeaderAPIKeyAccept(req *http.Request) {
 	req.Header.Set("Accept", "application/json")
 }
 
-func (c *SAPAPICaller) getQueryWithProductCollection(req *http.Request, productID string) {
+func (c *SAPAPICaller) getQueryWithProductCollection(req *http.Request, objectID, productID string) {
 	params := req.URL.Query()
-	params.Add("$filter", fmt.Sprintf("ProductID eq '%s'", productID))
+	params.Add("$filter", fmt.Sprintf("ObjectID eq '%s' and ProductID eq '%s'", objectID, productID))
 	req.URL.RawQuery = params.Encode()
 }
